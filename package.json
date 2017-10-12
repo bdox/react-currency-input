@@ -11,7 +11,7 @@
     "prepublish": "npm run build",
     "build-example": "browserify example/example.js -o example/bundle.js -t [ babelify --presets [ es2015 react ] ]",
     "test": "mocha --compilers js:babel-register ",
-    "webpack": "webpac
+    "webpack": "webpack",
     "webpack-dev": "webpack-dev-server"
   },
   "repository": {
