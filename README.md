@@ -6,7 +6,10 @@ An ES2015 react component for currency. Supports custom decimal and thousand sep
 
 ## Changes
 
-## v1.3.0:
+## v1.3.3:
+- Updated dependencies to React 16
+
+## v1.3.2:
 
 - Deprecated "onChange" option in favor of "onChangeEvent". This fixes the argument order to better match React's default input handling
 - Updated dependencies to React 15
