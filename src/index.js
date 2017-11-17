@@ -95,6 +95,18 @@ class CurrencyInput extends Component {
         return { maskedValue, value, customProps };
     }
 
+    /**
+     * shouldComponentUpdate()
+     * 
+     * Component lifecycle function.
+     * Invoked before rendering when new props or state are being received.
+     *
+     * @param nextProps, nextState
+     * @see https://reactjs.org/docs/react-component.html#shouldcomponentupdate
+     */
+    shouldComponentUpdate(nextProps, nextState) {
+        return !this.updater.isMounted(this) || (this.state.value !== nextState.value);
+    }
 
     /**
      * Component lifecycle function.
