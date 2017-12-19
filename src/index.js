@@ -51,7 +51,7 @@ class CurrencyInput extends Component {
         let initialValue = props.value;
         if (initialValue === null || initialValue === '') {
             initialValue = props.allowEmpty? null : '';
-        }else{
+        } else {
 
             if (typeof initialValue === 'string') {
                 // Some people, when confronted with a problem, think "I know, I'll use regular expressions."
@@ -125,7 +125,7 @@ class CurrencyInput extends Component {
      * @returns {XML}
      * @see https://facebook.github.io/react/docs/react-component.html#componentdidmount
      */
-    componentDidMount(){
+    componentDidMount() {
         let node = ReactDOM.findDOMNode(this.theInput);
 
         let selectionEnd = Math.min(node.selectionEnd, this.theInput.value.length - this.props.suffix.length);
@@ -202,6 +202,10 @@ class CurrencyInput extends Component {
             this.props.prefix,
             this.props.suffix
         );
+
+        if(value === 0 && this.props.allowEmpty) {
+            maskedValue = '';
+        }
 
         event.persist();  // fixes issue #23
 
