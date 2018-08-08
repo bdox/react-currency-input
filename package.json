@@ -1,6 +1,6 @@
 {
   "name": "react-currency-input-bdox",
-  "version": "1.3.6",
+  "version": "1.3.8",
   "description": "React component for inputing currency amounts",
   "main": "lib/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "lib": "rimraf lib && npm run babel",
     "babel": "babel --out-dir lib src",
     "build": "npm run lib",
-    "prepublish": "npm run build",
+    "prepare": "npm run build",
     "build-example": "browserify example/example.js -o example/bundle.js -t [ babelify --presets [ es2015 react ] ]",
     "test": "mocha --compilers js:babel-register ",
     "webpack": "webpack",
